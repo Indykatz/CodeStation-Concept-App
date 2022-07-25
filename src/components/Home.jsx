@@ -14,7 +14,7 @@ const Home = () => {
           Over 10,000 coding events at your finger tips
         </h2>
         <p className='text-[#438759] py-4 max-w-[700px]'>
-        COMING SOON...       
+        Your one stop for coding and community is coming soon...       
         </p>
         <div>
           <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-green-400 hover:border-green-400'>
