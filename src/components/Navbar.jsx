@@ -8,9 +8,9 @@ import {
   FaLinkedinIn,
 } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
 import Logo from '../assets/logo.png';
 import { Link } from 'react-scroll';
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -18,9 +18,14 @@ const Navbar = () => {
 
   return (
     <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#E5FFEE] text-green-700'>
-      <div>
-        <img src={Logo} alt='Logo Image' style={{ width: '400px' }} />
-      </div>
+      <motion.div
+        initial={{ x: -315 }}
+        animate={{ x: 700 }}
+        transition={{ delay: 1, duration: 20, }}
+        
+        >        
+          <img src={Logo} alt='Logo Image' style={{ width: '400px' }} />
+      </motion.div>
 
       {/* menu */}
       <ul className='hidden md:flex'>
