@@ -6,8 +6,8 @@ import {
   FaLinkedin,
   FaFacebook,
   FaLinkedinIn,
+  FaTwitter,
 } from 'react-icons/fa';
-import { HiOutlineMail } from 'react-icons/hi';
 import Logo from '../assets/logo.png';
 import { Link } from 'react-scroll';
 import { motion } from "framer-motion";
@@ -19,9 +19,13 @@ const Navbar = () => {
   return (
     <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#E5FFEE] text-green-700'>
       <motion.div
-        initial={{ x: -315 }}
-        animate={{ x: 700 }}
-        transition={{ delay: 1, duration: 20, }}
+        animate={{ 
+          x: [ -420, 700, 450, -420, 0 ]           
+        }}
+        transition={{ 
+          delay: 2, 
+          duration: 15,                   
+        }}    
         
         >        
           <img src={Logo} alt='Logo Image' style={{ width: '400px' }} />
@@ -66,7 +70,7 @@ const Navbar = () => {
         className={
           !nav
             ? 'hidden'
-            : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
+            : 'absolute top-0 left-0 w-full h-screen bg-[#E5FFEE] flex flex-col justify-center items-center'
         }
       >
         <li className='py-6 text-4xl'>
@@ -124,10 +128,10 @@ const Navbar = () => {
               className='flex justify-between items-center w-full text-gray-300'
               href='/'
             >
-              Email <HiOutlineMail size={30} />
+              Email <FaTwitter size={30} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#0376f9]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
               href='/'
