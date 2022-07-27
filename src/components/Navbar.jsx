@@ -19,12 +19,17 @@ const Navbar = () => {
   return (
     <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#E5FFEE] text-green-700'>
       <motion.div
+        initial={{ 
+          x: -420 
+        }}
         animate={{ 
-          x: [ -420, 700, 450, -420, 0 ]           
+          x: 0,           
         }}
         transition={{ 
-          delay: 2, 
-          duration: 15,                   
+          delay: 1, 
+          duration: 10,
+          type: "spring", 
+          stiffness: 200 
         }}    
         
         >        
